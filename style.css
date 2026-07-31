@@ -3,9 +3,15 @@ body {
    margin: 0;
 }
 
+hr {
+   border: none;          
+   height: 2px;           
+   background-color: rgb(20, 20, 20);
+}
+
 #bar {
    background-color: rgb(97, 223, 255);
-   border: 3px solid rgb(29, 210, 255);
+   border: 3px solid rgb(171, 235, 251);
    padding: 12px;
    display: flex;
    justify-content: flex-end; 
@@ -30,11 +36,12 @@ body {
    font-size: 20px;
    text-decoration: none;
    padding: 4px;
+
+   transition: transform 0.2s ease;
 }
 
 .top_bar:hover {
-   background-color: rgb(162, 208, 255); 
-   color: black;
+   transform: scale(1.2);
 }
 
 #Welcome {
@@ -49,6 +56,12 @@ body {
    margin: 0;
    padding: 120px;
    font-size: 100px;
+
+   transition: font-size 0.4s ease;
+}
+
+#Welcome:hover {
+   font-size: 130px;
 }
 
 #about_me {
@@ -61,13 +74,15 @@ body {
    justify-content: space-around;
    align-items: center;
    font-size: 30px;
+   margin: 1in;
 }
 
 #ABOUTME {
-   display: flex;
-   justify-content: center;
+   text-align: center;
    font-size: 60px;
    padding: 20px;
+   margin: 1in;
+   line-height: 2px;
 }
 
 #smiley {
@@ -80,17 +95,19 @@ body {
 }
 
 #SKILLS {
-   display: flex;
-   justify-content: center;
+   text-align: center;
    font-size: 60px;
    padding: 20px;
+   margin: 1in;
+   line-height: 2px;
 }
 
 .skill {
    display: flex;
    justify-content: flex-start;
    align-items: center;
-   font-size: 20px;
+   font-size: 25px;
+   margin-right: 1in;
 }
 
 .smiley2 {
@@ -103,17 +120,18 @@ body {
 }
 
 #CODINGEXP {
-   display: flex;
-   justify-content: center;
+   text-align: center;
    font-size: 60px;
    padding: 20px;
+   line-height: 2px;
+   margin: 1in;
 }
 
 .language {
    display: flex;
    flex-direction: column;
    align-items: center;
-   font-size: 16px;
+   font-size: 17px;
 }
 
 .smiley3 {
@@ -123,7 +141,7 @@ body {
 #list_of_codeEXP {
    display: flex;
    justify-content: space-between;
-   gap: 10px;
+   gap: 15px;
    padding: 20px;
 }
 
@@ -133,15 +151,17 @@ body {
 }
 
 #INVOLVEMENTS {
-   display: flex;
-   justify-content: center;
+   text-align: center;
    font-size: 60px;
    padding: 20px;
+   margin: 1in;
+   line-height: 2px;
 }
 
 .activities {
    display: flex;
    justify-content: flex-start;
    align-items: center;
-   font-size: 20px;
+   font-size: 25px;
+   margin-right: 1in;
 }
