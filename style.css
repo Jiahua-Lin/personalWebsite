@@ -3,6 +3,10 @@ body {
    margin: 0;
 }
 
+html {
+   scroll-behavior: smooth;
+}
+
 hr {
    border: none;          
    height: 2px;           
@@ -16,6 +20,12 @@ hr {
    display: flex;
    justify-content: flex-end; 
    align-items: center; 
+
+   position: fixed;
+   width: 100%;
+   box-sizing: border-box;
+
+   z-index: 1000;
 }
 
 #main_page {
@@ -70,9 +80,6 @@ hr {
 }
 
 #ME {
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
    font-size: 30px;
    margin: 1in;
 }
@@ -110,6 +117,11 @@ hr {
    margin-right: 1in;
 }
 
+#smiley1 {
+   width: 35%;
+   float: left;
+}
+
 .smiley2 {
    width: 20%;
 }
@@ -122,27 +134,61 @@ hr {
 #CODINGEXP {
    text-align: center;
    font-size: 60px;
-   padding: 20px;
+   padding: 20px 20px 10px 20px;
    line-height: 2px;
-   margin: 1in;
+   margin: 1in 1in 0in 1in;
 }
 
 .language {
+   display: none;
+}
+
+.language.active {
+   display: show;
    display: flex;
    flex-direction: column;
    align-items: center;
-   font-size: 17px;
+   font-size: 27px;
+}
+
+.language p {
+   text-align: center;
+   max-width: 1100px;
 }
 
 .smiley3 {
-   width: 70%;
+   width: 60%;
 }
 
 #list_of_codeEXP {
+   position: relative;
    display: flex;
    justify-content: space-between;
    gap: 15px;
    padding: 20px;
+}
+
+.buttons button {
+   position: absolute;
+   top: 35%;
+   transform: translateY(-50%); 
+
+   width: 44px;
+   height: 44px;
+   font-size: 20px;
+
+   background-color: rgba(0, 0, 0, 0.8);
+   color: rgb(255, 255, 255);
+   border: none;
+   border-radius: 50%;
+}
+
+.prev {
+   left: 200px;
+}
+
+.next {
+   right: 200px;
 }
 
 #involvements {
@@ -159,9 +205,32 @@ hr {
 }
 
 .activities {
-   display: flex;
-   justify-content: flex-start;
-   align-items: center;
    font-size: 25px;
    margin-right: 1in;
 }
+
+#row1 {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+}
+
+#row1 img {
+   transition: transform 0.3s ease;
+}
+
+#row1 img:hover {
+   transform: scale(1.25);
+}
+
+.activities p {
+   display: none;
+}
+
+.activities p.on {
+   display: block;
+   display: flex;
+   justify-content: center;
+   text-align: center;
+}
+

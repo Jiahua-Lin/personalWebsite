@@ -5,6 +5,24 @@ const coding_experience = document.getElementById("coding_experience");
 const involvements = document.getElementById("involvements")
 const bar = document.getElementById("bar")
 
+const prevButton = document.querySelector('.prev');
+const nextButton = document.querySelector('.next');
+const carouselDivs = document.querySelectorAll('.language');
+
+const seo = document.querySelector('.seo');
+const nhs = document.querySelector('.nhs');
+const n25 = document.querySelector('.n25');
+const allstarcode = document.querySelector('.allstarcode');
+
+const involvementInfo = document.getElementById("involvement_info");
+const inv1 = document.getElementById("involvement1");
+const inv2 = document.getElementById("involvement2");
+const inv3 = document.getElementById("involvement3");
+const inv4 = document.getElementById("involvement4");
+
+let divArray = Array.from(carouselDivs);
+let involvementArray = [involvementInfo, inv1, inv2, inv3, inv4];
+
 welcome_logo.addEventListener('click', function() {
     let hue = Math.floor(Math.random() * 360);
 
@@ -23,3 +41,57 @@ welcome_logo.addEventListener('click', function() {
     bar.style.borderColor = `hsla(${hue}, 100%, 50%, 0.5)`;
 })
 
+prevButton.addEventListener('click', function() {
+    let currentIndex = divArray.findIndex(div => div.classList.contains('active'));
+        for (let i = 0; i < divArray.length; i++) {
+            divArray[i].classList.remove('active');
+        }
+
+    currentIndex -= 1;
+    if (currentIndex < 0) {
+        currentIndex = divArray.length - 1;
+    }
+    divArray[currentIndex].classList.add('active');
+
+})
+
+nextButton.addEventListener('click', function() {
+    let currentIndex = divArray.findIndex(div => div.classList.contains('active'));
+    for (let i = 0; i < divArray.length; i++) {
+        divArray[i].classList.remove('active');
+    }
+
+    currentIndex += 1;
+    if (currentIndex > divArray.length - 1) {
+        currentIndex = 0;
+    }
+    divArray[currentIndex].classList.add('active');
+})
+
+seo.addEventListener('click', function() {
+    for (let i = 0; i < involvementArray.length; i++) {
+        involvementArray[i].classList.remove('on');
+    }
+    inv1.classList.add('on');
+})
+
+nhs.addEventListener('click', function() {
+    for (let i = 0; i < involvementArray.length; i++) {
+        involvementArray[i].classList.remove('on');
+    }
+    inv2.classList.add('on');
+})
+
+n25.addEventListener('click', function() {
+    for (let i = 0; i < involvementArray.length; i++) {
+        involvementArray[i].classList.remove('on');
+    }
+    inv3.classList.add('on');
+})
+
+allstarcode.addEventListener('click', function() {
+    for (let i = 0; i < involvementArray.length; i++) {
+        involvementArray[i].classList.remove('on');
+    }
+    inv4.classList.add('on');
+})
