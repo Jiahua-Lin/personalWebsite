@@ -126,6 +126,42 @@ hr {
    width: 20%;
 }
 
+.html_image {
+   width: 17%;
+}
+
+.css_image {
+   width: 13%;
+}
+
+.lua_image {
+   width: 17%;
+}
+
+.snap_image {
+   width: 17%;
+}
+
+#html_skill {
+   margin-left: 20px;
+   gap: clamp(5px, 20px, 40px);
+}
+
+#css_skill {
+   margin-left: 50px;
+   gap: clamp(5px, 40px, 50px);
+}
+
+#snap_skill {
+   margin-left: 15px;
+   gap: clamp(5px, 30px, 50px);
+}
+
+#lua_skill {
+   margin-left: 15px;
+   gap: clamp(5px, 30px, 50px);
+}
+
 #coding_experience {
    background-color: rgb(195, 243, 255);
    border: 3px solid rgb(171, 235, 251);
